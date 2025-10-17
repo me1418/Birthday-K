@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#764ba2">
+    <meta name="description" content="Happy Birthday Keisya - Ucapan Ulang Tahun Spesial">
+    <title>Haii, Happy Birthday yaa Keisya 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Halaman Pemilihan Lagu -->
+    <div class="music-selection" id="musicSelection">
+        <div class="music-content">
+            <h1 class="music-title">🎵 Pilih Lagu Untuk Menemanimu Membaca Ini 🎵</h1>
+            <p class="music-subtitle">Pilih lagu yang mau menemani momen spesial ini~</p>
+            
+            <div class="music-options">
+                <div class="music-card" onclick="selectMusic('diri-tulus.mp3')">
+                    <div class="music-icon">🎸</div>
+                    <h3>Diri</h3>
+                    <p>Tulus</p>
+                    <div class="music-badge">Pilih Lagu Ini</div>
+                </div>
+                
+                <div class="music-card" onclick="selectMusic('taylor-youre-on-your-own-kid.mp3')">
+                    <div class="music-icon">✨</div>
+                    <h3>You're On Your Own, Kid</h3>
+                    <p>Taylor Swift</p>
+                    <div class="music-badge">Pilih Lagu Ini</div>
+                </div>
+            </div>
+            
+            <p class="music-note">💡 Klik salah satu untuk melanjutkan</p>
+        </div>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="container" id="mainContainer" style="display: none;">
+        <!-- Background hearts -->
+        <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="heart" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="heart" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="heart" style="left: 70%; animation-delay: 1s;"></div>
+        <div class="heart" style="left: 90%; animation-delay: 3s;"></div>
+
+        <!-- Sparkles -->
+        <div class="sparkle" style="left: 20%; top: 30%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="left: 80%; top: 20%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="left: 60%; top: 70%; animation-delay: 2s;"></div>
+        <div class="sparkle" style="left: 40%; top: 50%; animation-delay: 1.5s;"></div>
+
+        <!-- Slide 1: Pembukaan -->
+        <div class="slide active">
+            <h1>Haiii! 👋</h1>
+            <div class="emoji">🎀</div>
+            <p>Ada sesuatu yang mau aku sampein buat orang spesial di hari spesialnya...</p>
+            <button onclick="nextSlide()">Apatuhh? 🤔</button>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <h1>Keisya... 💕</h1>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <p>Hari ini bener bener hari yang sangat istimewa pastinya buat mu</p>
+            <button onclick="nextSlide()">Kenapaa? 🎁</button>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <h1>Karena...</h1>
+            <div class="emoji">🎂</div>
+            <p>Hari ini adalah hari dimana manusia terfavorit Ulang tahun yang ke-17!</p>
+            <p class="big-text">🎉 YEAAAYYY HAPPY BIRTHDAY! 🎉</p>
+            <button onclick="nextSlide()">Lanjut dong... 😊</button>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <h1>Tahu gakK? 🤗</h1>
+            <div class="emoji">🌸</div>
+            <p>Kamu itu orang yang kuat yaa keren jugaa dan selalu mau bertumbuh</p>
+            <p>Semoga di hari ulang tahun ke 17 ini ngga cuman sekedar menambah angka tetapi juga kamu selalu sehat, makin di kuatkan dalam segala urusan, dan apapun harapan yang kamu inginkan semoga lekas terkabul yaa. Semoga di umur ke-17 ini makin banya sabar, bisa makin kontrol emosi jugaakk dann makin banyak gebrakan kesuksesannya. Aku selalu berdo'a yang terbaik buat mu, ditunggu yaa gebrakan kesuksesan selanjutnyaa wowowow aamiiinnn. Oiyaa salam yaa buat keluarga dan mpus mpus jugaak. Sehat terus yaa semua...</p>
+            <button onclick="nextSlide()">Apaan sih~ 😊</button>
+        </div>
+
+        <!-- Slide 5: Foto -->
+        <div class="slide">
+            <h1>Ini Dia... 📸</h1>
+            <p class="subtitle">Orang lucu yang suka bahagiain orang lain dulu baru dirinya, huhhh bahagia terus yaa kamu. 💖</p>
+            <div class="photo-container">
+                <img src="foto-keisya.jpg" alt="Keisya" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📷<br>Foto Keisya</div>'">
+            </div>
+            <p>Cantik banget kan? 🥰</p>
+            <button onclick="nextSlide()">Masih ada lagi? 💕</button>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide">
+            <h1>Keisya...</h1>
+            <div class="emoji">💝</div>
+            <p>Di umur yang ke-17 ini, aku mau kamu tahu...</p>
+            <button onclick="nextSlide()">Tahu apa? 💭</button>
+        </div>
+
+        <!-- Slide 7: Pesan Final -->
+        <div class="slide">
+            <div class="final-message">
+                <h1 class="final-title">Selamat Ulang Tahun! 🎂</h1>
+                <div class="emoji">❤️</div>
+                <p class="final-text">
+                    Terima kasih sudah pernah hadir dalam hidupku.<br>
+                    Terima kasih untuk setiap senyum, tawa, dan kebahagiaan yang pernah kamu berikan.<br><br>
+                    Semoga di umur yang ke-17 ini, semua impianmu tercapai yaa aamiiinnn, selalu ada manusia yang mencintaimu, SOOO gabole merasa sendiri yaa<br>
+                    kesehatan nya dijaga selaluu,<br>
+                    dan kebahagiaan selalu membersamaimu Keisyaa! ✨<br><br>
+                    <strong class="highlight-text">
+                        Aku harap kamu gatau ini siapa hehe, mungkin kamu mikir seseorang tapi anggap aja itu salah yaap Keisya Laurentina Otneal! 💕💕💕
+                    </strong>
+                </p>
+                <div class="balloons-container">
+                    <div class="balloon">🎈</div>
+                    <div class="balloon">🎊</div>
+                    <div class="balloon">🎉</div>
+                    <div class="balloon">🎁</div>
+                </div>
+                <button onclick="location.reload()" class="restart-btn">Lihat Lagi dari Awal 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player -->
+    <audio id="bgm" loop>
+        <source id="audioSource" src="" type="audio/mpeg">
+    </audio>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const bgm = document.getElementById('bgm');
+        const audioSource = document.getElementById('audioSource');
+
+        // Fungsi untuk memilih musik
+        function selectMusic(musicFile) {
+            // Set source audio
+            audioSource.src = musicFile;
+            bgm.load();
+            
+            // Play music
+            bgm.play().catch(function(error) {
+                console.log('Autoplay prevented:', error);
+            });
+            
+            // Sembunyikan halaman pemilihan musik
+            document.getElementById('musicSelection').style.display = 'none';
+            
+            // Tampilkan konten utama
+            document.getElementById('mainContainer').style.display = 'flex';
+            
+            // Mulai animasi hati
+            setInterval(createHeart, 2000);
+        }
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide++;
+            if (currentSlide < slides.length) {
+                slides[currentSlide].classList.add('active');
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.querySelector('.container').appendChild(heart);
+            setTimeout(() => heart.remove(), 8000);
+        }
+
+        // Prevent zoom on double tap for mobile
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Pastikan musik tetap bermain saat user berinteraksi
+        document.addEventListener('click', function() {
+            if (bgm.paused && audioSource.src) {
+                bgm.play().catch(function(error) {
+                    console.log('Play prevented:', error);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
